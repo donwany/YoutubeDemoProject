@@ -1,6 +1,6 @@
 package com.aerogramme.HelloWorld;
 
-public class iBankAccount {
+public abstract class iBankAccount {
 
     private double balance;
 
@@ -15,6 +15,10 @@ public class iBankAccount {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    // define abstract method
+    abstract double computerPay(double amount);
+
 
     // withdraw
 
