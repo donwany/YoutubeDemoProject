@@ -2,6 +2,9 @@ package com.aerogramme.HelloWorld;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileNotFoundException;
+
+import static com.apple.eio.FileManager.getResource;
 
 public class GUI {
 
@@ -40,6 +43,12 @@ public class GUI {
         panel.add(send);
         panel.add(reset);
 
+        try {
+            send.setIcon(new ImageIcon(getResource("com/aerogramme/HelloWorld/anm-bg-05.jpg")));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
         // Text Area at the Center
         JTextArea ta = new JTextArea();
 
@@ -48,6 +57,7 @@ public class GUI {
         frame.getContentPane().add(BorderLayout.NORTH, mb);
         frame.getContentPane().add(BorderLayout.CENTER, ta);
         frame.setVisible(true);
+        frame.pack();
 
         send.addActionListener(e -> {
             //JOptionPane.showMessageDialog(frame,"Hello", "Testing",JOptionPane.QUESTION_MESSAGE);
