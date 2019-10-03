@@ -39,10 +39,10 @@ public class FilesDemo {
         }
 
         try{
+
             FileWriter writer = new FileWriter("com/aerogramme/HelloWorld/file.txt");
             writer.write("Data 1");
             writer.write("Data 2");
-
             writer.close();
 
         }catch (Exception ex){
