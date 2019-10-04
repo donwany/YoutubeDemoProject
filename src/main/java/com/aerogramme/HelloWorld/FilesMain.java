@@ -1,8 +1,6 @@
 package com.aerogramme.HelloWorld;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FilesMain {
 
@@ -15,7 +13,11 @@ public class FilesMain {
 
             FilesUtil.writeToTextFile("/Users/ts5167/Documents/DemoProject/src/main/java/com/aerogramme/HelloWorld/copy.txt", input);
 
+            System.out.println("********************************************");
+
             System.out.println(FilesUtil.readTextFile("/Users/ts5167/Documents/DemoProject/src/main/java/com/aerogramme/HelloWorld/copy.txt"));
+
+            System.out.println("********************************************");
 
             System.out.println(FilesUtil.readTextFileByLines("/Users/ts5167/Documents/DemoProject/src/main/java/com/aerogramme/HelloWorld/file.txt"));
 
@@ -25,7 +27,7 @@ public class FilesMain {
 
             //System.out.println(Task.Status.COMPLETED);
 
-            System.out.println(new Task(1020,"Checking on the CD","Faulty drive", Task.Status.CREATED, 25).getStatus());
+           /* System.out.println(new Task(1020,"Checking on the CD","Faulty drive", Task.Status.CREATED, 25).getStatus());
             System.out.println(new Task(1021,"Checking on the CD","Faulty drive", Task.Status.COMPLETED, 2).getDescription());
             System.out.println(new Task(1022,"Checking on the CD","Faulty drive", Task.Status.ASSIGNED, 12).getSummary());
             System.out.println(new Task(1022,"Checking on the CD","Faulty drive", Task.Status.ASSIGNED, 12).toString());
@@ -37,7 +39,7 @@ public class FilesMain {
                 list.add(new Task(i, "Test1", "Test2", Task.Status.ASSIGNED, 10));
             }
 
-            list.forEach((v) -> System.out.println(v));
+            list.forEach((v) -> System.out.println(v));*/
 
 
 

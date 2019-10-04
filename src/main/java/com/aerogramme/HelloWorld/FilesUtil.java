@@ -20,13 +20,12 @@ public class FilesUtil {
 
     public static void writeToTextFile(String fileName, String content) throws IOException {
         Files.write(Paths.get(fileName), content.getBytes(), StandardOpenOption.CREATE);
+
     }
 
-    public static  void  deleteTextFiles(String fileName){
-
+    public static void deleteTextFiles(String fileName){
         try{
             Files.deleteIfExists(Paths.get(fileName));
-
         }catch (IOException ex){
             ex.printStackTrace();
         }
