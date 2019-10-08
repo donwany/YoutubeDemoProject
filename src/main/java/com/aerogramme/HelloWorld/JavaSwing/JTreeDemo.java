@@ -52,8 +52,8 @@ public class JTreeDemo {
         color.add(green);
 
         JTree jt = new JTree(style);
-        frame.add(jt);
 
+        frame.add(jt);
 
         //panel.add(tree);
         //frame.add(panel);
