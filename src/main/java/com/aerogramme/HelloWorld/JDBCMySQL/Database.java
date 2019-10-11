@@ -218,7 +218,6 @@ public class Database {
 
     }
 
-
     // delete statement
     public void deleteData(){
 
@@ -264,7 +263,6 @@ public class Database {
         }
 
     }
-
 
     public static void closeConnection(){
         if(conn != null){
