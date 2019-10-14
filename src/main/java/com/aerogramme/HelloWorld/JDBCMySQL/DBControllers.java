@@ -62,5 +62,50 @@ public class DBControllers {
 
     }
 
+    public void insertData(String message, String message_id ){
+
+        System.out.println("Inserting data into mysql database ...");
+
+        try {
+            Class.forName(myDriver);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            conn = DriverManager.getConnection(myUrl, user, pwd);
+
+            if(conn != null){
+
+                int id = 1;
+
+                String sql = "INSERT INTO facebook_post VALUES(?,?)";
+
+                PreparedStatement ps = conn.prepareStatement(sql);
+                //ps.setInt(id++, id);
+                ps.setString(id++, message);
+                ps.setString(id++, message_id);
+
+                int rowsAffected = ps.executeUpdate();
+
+                if(rowsAffected > 0){
+                    System.out.println(rowsAffected + ": Row(s) affected");
+                }else{
+                    System.out.println("Rows not affected");
+                }
+
+
+            }else{
+                System.out.println("Connection to database failed. Try Again!");
+            }
+            // close connection
+            Database.closeConnection();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 }
